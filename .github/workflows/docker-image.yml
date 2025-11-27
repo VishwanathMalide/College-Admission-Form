@@ -1,10 +1,10 @@
 
-name: BUild and Push Docker
+name: Build and Push Docker
 
 on:
   push:
     branches:
-      -master
+      - master
 
 jobs:
   bulid:
@@ -24,8 +24,8 @@ jobs:
     - name: Build Docker Image
       run: |
         docker bulid \
-          -t vishwanathmalide/hr-app:v1.1.0
+          -t vishwanathmalide/devops-collage-form:v1.1.0 
           .
     - name: Push docker image to docker Hub
       run: |
-        docker push vishwanathmalide/devops-java:v1.1.0 
+        docker push vishwanathmalide/devops-collage-form:v1.1.0 
